@@ -21043,6 +21043,10 @@ body>footer>p.credit {
     margin: 0
 }
 
+body>footer>p.credit:after {
+    content: " designed by devcrm.it";
+}
+
 body>footer>p,
 body>footer>p a,
 body>footer>p a:active,
