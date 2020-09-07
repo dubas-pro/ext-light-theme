@@ -2,9 +2,6 @@
     "name": "Dubas Light Theme",
     "description": "More modern theme adjusted by dubas.pro",
     "author": "DUBAS - contact@dubas.pro",
-    "php": [
-        ">=7.0"
-    ],
     "acceptableVersions": [
         ">=5.0.0"
     ],
