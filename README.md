@@ -5,7 +5,7 @@ The theme created by devcrm.it to EspoCRM. The theme is available for download a
 This repo is for comments only, but we do not give any warranty for the theme or installer. You install this theme on your own responsibility. We do not provide additional free support.
 
 ## Requirements
-1. EspoCRM in version higher than 5.0.0
+1. EspoCRM in version higher than 5.9.0
 
 ## Getting started
 1. Open our website [https://devcrm.it/light-theme](https://devcrm.it/light-theme) and download installer;
