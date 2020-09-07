@@ -11,7 +11,8 @@ This repo is for comments only, but we do not give any warranty for the theme or
 1. Open our website [https://devcrm.it/light-theme](https://devcrm.it/light-theme) and download installer;
 2. Login to your EspoCRM as admin;
 3. Go to admin section and open extensions page;
-4. Choose installer from you computer and start installation process.
+4. Choose installer from you computer and start installation process;
+5. Choose new theme in your user preferences.
 
 ## Support
 All information about our services you can check on our website [https://devcrm.it/](https://devcrm.it/).
