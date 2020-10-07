@@ -5841,7 +5841,7 @@ fieldset[disabled] .navbar-default .btn-link:hover {
 
 .navbar-inverse .navbar-toggle:focus,
 .navbar-inverse .navbar-toggle:hover {
-    background-color: #3f535c
+    background-color: #363635
 }
 
 .navbar-inverse .navbar-toggle .icon-bar {
@@ -16532,6 +16532,12 @@ li.ui-timepicker-selected .ui-timepicker-duration {
     font-weight: 900
 }
 
+/*!
+ * required gridstack 1.2.1 CSS for default 12 and 1 columnMode size. Use gridstack-extra.css for others
+ * https://gridstackjs.com/
+ * (c) 2014-2020 Alain Dumesny, Dylan Weiss, Pavel Reznikov
+ * gridstack.js may be freely distributed under the MIT license.
+*/
 :root .grid-stack-item>.ui-resizable-handle {
     filter: none
 }
@@ -16575,7 +16581,6 @@ li.ui-timepicker-selected .ui-timepicker-duration {
     right: 10px;
     bottom: 0;
     width: auto;
-    z-index: 0 !important;
     overflow-x: hidden;
     overflow-y: auto
 }
@@ -16606,7 +16611,7 @@ li.ui-timepicker-selected .ui-timepicker-duration {
 
 .grid-stack>.grid-stack-item>.ui-resizable-se,
 .grid-stack>.grid-stack-item>.ui-resizable-sw {
-    background-image: url(data:image/svg+xml;    base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjE2cHgiIGhlaWdodD0iMTZweCIgdmlld0JveD0iMCAwIDUxMS42MjYgNTExLjYyNyIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTExLjYyNiA1MTEuNjI3OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxnPgoJPHBhdGggZD0iTTMyOC45MDYsNDAxLjk5NGgtMzYuNTUzVjEwOS42MzZoMzYuNTUzYzQuOTQ4LDAsOS4yMzYtMS44MDksMTIuODQ3LTUuNDI2YzMuNjEzLTMuNjE1LDUuNDIxLTcuODk4LDUuNDIxLTEyLjg0NSAgIGMwLTQuOTQ5LTEuODAxLTkuMjMxLTUuNDI4LTEyLjg1MWwtNzMuMDg3LTczLjA5QzI2NS4wNDQsMS44MDksMjYwLjc2LDAsMjU1LjgxMywwYy00Ljk0OCwwLTkuMjI5LDEuODA5LTEyLjg0Nyw1LjQyNCAgIGwtNzMuMDg4LDczLjA5Yy0zLjYxOCwzLjYxOS01LjQyNCw3LjkwMi01LjQyNCwxMi44NTFjMCw0Ljk0NiwxLjgwNyw5LjIyOSw1LjQyNCwxMi44NDVjMy42MTksMy42MTcsNy45MDEsNS40MjYsMTIuODUsNS40MjYgICBoMzYuNTQ1djI5Mi4zNThoLTM2LjU0MmMtNC45NTIsMC05LjIzNSwxLjgwOC0xMi44NSw1LjQyMWMtMy42MTcsMy42MjEtNS40MjQsNy45MDUtNS40MjQsMTIuODU0ICAgYzAsNC45NDUsMS44MDcsOS4yMjcsNS40MjQsMTIuODQ3bDczLjA4OSw3My4wODhjMy42MTcsMy42MTcsNy44OTgsNS40MjQsMTIuODQ3LDUuNDI0YzQuOTUsMCw5LjIzNC0xLjgwNywxMi44NDktNS40MjQgICBsNzMuMDg3LTczLjA4OGMzLjYxMy0zLjYyLDUuNDIxLTcuOTAxLDUuNDIxLTEyLjg0N2MwLTQuOTQ4LTEuODA4LTkuMjMyLTUuNDIxLTEyLjg1NCAgIEMzMzguMTQyLDQwMy44MDIsMzMzLjg1Nyw0MDEuOTk0LDMyOC45MDYsNDAxLjk5NHoiIGZpbGw9IiM2NjY2NjYiLz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K);
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjE2cHgiIGhlaWdodD0iMTZweCIgdmlld0JveD0iMCAwIDUxMS42MjYgNTExLjYyNyIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTExLjYyNiA1MTEuNjI3OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxnPgoJPHBhdGggZD0iTTMyOC45MDYsNDAxLjk5NGgtMzYuNTUzVjEwOS42MzZoMzYuNTUzYzQuOTQ4LDAsOS4yMzYtMS44MDksMTIuODQ3LTUuNDI2YzMuNjEzLTMuNjE1LDUuNDIxLTcuODk4LDUuNDIxLTEyLjg0NSAgIGMwLTQuOTQ5LTEuODAxLTkuMjMxLTUuNDI4LTEyLjg1MWwtNzMuMDg3LTczLjA5QzI2NS4wNDQsMS44MDksMjYwLjc2LDAsMjU1LjgxMywwYy00Ljk0OCwwLTkuMjI5LDEuODA5LTEyLjg0Nyw1LjQyNCAgIGwtNzMuMDg4LDczLjA5Yy0zLjYxOCwzLjYxOS01LjQyNCw3LjkwMi01LjQyNCwxMi44NTFjMCw0Ljk0NiwxLjgwNyw5LjIyOSw1LjQyNCwxMi44NDVjMy42MTksMy42MTcsNy45MDEsNS40MjYsMTIuODUsNS40MjYgICBoMzYuNTQ1djI5Mi4zNThoLTM2LjU0MmMtNC45NTIsMC05LjIzNSwxLjgwOC0xMi44NSw1LjQyMWMtMy42MTcsMy42MjEtNS40MjQsNy45MDUtNS40MjQsMTIuODU0ICAgYzAsNC45NDUsMS44MDcsOS4yMjcsNS40MjQsMTIuODQ3bDczLjA4OSw3My4wODhjMy42MTcsMy42MTcsNy44OTgsNS40MjQsMTIuODQ3LDUuNDI0YzQuOTUsMCw5LjIzNC0xLjgwNywxMi44NDktNS40MjQgICBsNzMuMDg3LTczLjA4OGMzLjYxMy0zLjYyLDUuNDIxLTcuOTAxLDUuNDIxLTEyLjg0N2MwLTQuOTQ4LTEuODA4LTkuMjMyLTUuNDIxLTEyLjg1NCAgIEMzMzguMTQyLDQwMy44MDIsMzMzLjg1Nyw0MDEuOTk0LDMyOC45MDYsNDAxLjk5NHoiIGZpbGw9IiM2NjY2NjYiLz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K);
     background-repeat: no-repeat;
     background-position: center;
     -webkit-transform: rotate(45deg);
@@ -16884,6 +16889,26 @@ li.ui-timepicker-selected .ui-timepicker-duration {
     max-width: 100%
 }
 
+.grid-stack.grid-stack-1>.grid-stack-item {
+    min-width: 100%
+}
+
+.grid-stack.grid-stack-1>.grid-stack-item[data-gs-width='1'] {
+    width: 100%
+}
+
+.grid-stack.grid-stack-1>.grid-stack-item[data-gs-x='1'] {
+    left: 100%
+}
+
+.grid-stack.grid-stack-1>.grid-stack-item[data-gs-min-width='1'] {
+    min-width: 100%
+}
+
+.grid-stack.grid-stack-1>.grid-stack-item[data-gs-max-width='1'] {
+    max-width: 100%
+}
+
 .grid-stack.grid-stack-animate,
 .grid-stack.grid-stack-animate .grid-stack-item {
     -webkit-transition: left .3s, top .3s, height .3s, width .3s;
@@ -16901,23 +16926,6 @@ li.ui-timepicker-selected .ui-timepicker-duration {
     -ms-transition: left 0s, top 0s, height 0s, width 0s;
     -o-transition: left 0s, top 0s, height 0s, width 0s;
     transition: left 0s, top 0s, height 0s, width 0s
-}
-
-.grid-stack.grid-stack-one-column-mode {
-    height: auto !important
-}
-
-.grid-stack.grid-stack-one-column-mode>.grid-stack-item {
-    position: relative !important;
-    width: auto !important;
-    left: 0 !important;
-    top: auto !important;
-    margin-bottom: 20px;
-    max-width: none !important
-}
-
-.grid-stack.grid-stack-one-column-mode>.grid-stack-item>.ui-resizable-handle {
-    display: none
 }
 
 @font-face {
@@ -16975,6 +16983,7 @@ li.ui-timepicker-selected .ui-timepicker-duration {
     background-color: #d7dde4;
     border: none;
     border-bottom: 1px #fff solid;
+
 }
 
 @media (min-width:768px) {
@@ -16997,7 +17006,7 @@ li.ui-timepicker-selected .ui-timepicker-duration {
 
     body #header,
     body.minimized.side-menu-opened #header {
-        width: 200px
+        width: 210px
     }
 
     body #navbar .navbar .navbar-body,
@@ -17009,7 +17018,7 @@ li.ui-timepicker-selected .ui-timepicker-duration {
     body #navbar .navbar .nav>li.more>.dropdown-menu,
     body.minimized.side-menu-opened #navbar .navbar .nav>li.more>.dropdown-menu {
         top: 0;
-        left: 200px;
+        left: 210px;
         padding-top: 0;
         padding-bottom: 0;
         position: fixed;
@@ -17020,7 +17029,7 @@ li.ui-timepicker-selected .ui-timepicker-duration {
 
     body #navbar .navbar ul.tabs,
     body.minimized.side-menu-opened #navbar .navbar ul.tabs {
-        width: 200px;
+        width: 210px;
         margin-left: 0;
         overflow-y: hidden
     }
@@ -17031,7 +17040,7 @@ li.ui-timepicker-selected .ui-timepicker-duration {
         text-decoration: none;
         margin-top: 5px;
         display: inline-block;
-        margin-left: 12px
+        margin-left: 15px
     }
 
     body #navbar .navbar a.minimizer>span.left,
@@ -17046,7 +17055,7 @@ li.ui-timepicker-selected .ui-timepicker-duration {
 
     body #navbar .navbar a.side-menu-button,
     body.minimized.side-menu-opened #navbar .navbar a.side-menu-button {
-        width: 38px;
+        width: 42px;
         padding-top: 9px;
         padding-bottom: 9px;
         text-align: center;
@@ -17068,7 +17077,7 @@ li.ui-timepicker-selected .ui-timepicker-duration {
         left: 0;
         height: 30px;
         width: 100%;
-        margin-left: 200px
+        margin-left: 210px
     }
 
     body #navbar .navbar,
@@ -17077,29 +17086,31 @@ li.ui-timepicker-selected .ui-timepicker-duration {
         border-width: 0;
         position: fixed;
         z-index: 1030;
-        width: 200px;
+        width: 210px;
         margin-bottom: 0;
         height: 100%
     }
 
     body #navbar .navbar-brand img,
     body.minimized.side-menu-opened #navbar .navbar-brand img {
-        max-width: 162px;
+        max-width: 168px;
         height: 37px
     }
 
     body #navbar a.navbar-brand,
     body.minimized.side-menu-opened #navbar a.navbar-brand {
-        max-width: 162px;
-        height: 37px
+        max-width: 168px;
+        height: 37px;
+        margin-left: 0
     }
 
     body #navbar .navbar-header,
     body.minimized.side-menu-opened #navbar .navbar-header {
-        width: 200px;
+        width: 210px;
+        height: 55px;
         display: block;
-        margin-bottom: 6px;
-        margin-top: 9px
+        padding-bottom: 9px;
+        padding-top: 9px
     }
 
     body #navbar .navbar-header>a.minimizer,
@@ -17118,8 +17129,8 @@ li.ui-timepicker-selected .ui-timepicker-duration {
         height: 70px;
         width: 100%;
         background-color: #f3f3f3;
-        margin-left: 200px;
-        padding-right: 200px
+        margin-left: 210px;
+        padding-right: 210px
     }
 
     body #navbar .navbar-right .global-search-container,
@@ -17169,7 +17180,7 @@ li.ui-timepicker-selected .ui-timepicker-duration {
 
     body #navbar ul.tabs,
     body.minimized.side-menu-opened #navbar ul.tabs {
-        margin-top: 3px
+        margin-top: 5px
     }
 
     body #navbar ul.tabs li,
@@ -17181,14 +17192,17 @@ li.ui-timepicker-selected .ui-timepicker-duration {
     body.minimized.side-menu-opened #navbar ul.tabs li>a {
         padding-top: 13px;
         padding-bottom: 9px;
-        padding-left: 10px
+        padding-left: 12px;
+        padding-right: 20px
     }
 
     body #navbar ul.tabs li.tab>a,
     body.minimized.side-menu-opened #navbar ul.tabs li.tab>a {
-        padding-left: 10px;
+        padding-left: 12px;
+        padding-right: 20px;
         margin-top: 8px;
         margin-bottom: 8px;
+
     }
 
     body #navbar .navbar-form,
@@ -17202,7 +17216,7 @@ li.ui-timepicker-selected .ui-timepicker-duration {
     }
 
     body.minimized.side-menu-opened #navbar>.navbar .navbar-logo-container {
-        width: calc(100% - 38px);
+        width: calc(100% - 42px);
         float: right;
         display: flex
     }
@@ -17263,12 +17277,12 @@ body #navbar ul.tabs>li>a {
 }
 
 body #navbar ul.tabs>li.more>ul>li>a>span.full-label {
-    padding-left: 30px;
+    padding-left: 36px;
     position: static
 }
 
 body #navbar ul.tabs>li a>span.full-label {
-    padding-left: 30px;
+    padding-left: 36px;
     position: static
 }
 
@@ -17326,11 +17340,11 @@ body #navbar .navbar li.tab>a>span.full-label {
 
 @media screen and (min-width:768px) {
     body.minimized #header {
-        width: 38px
+        width: 42px
     }
 
     body.minimized #navbar .nav>li.more>ul.dropdown-menu {
-        left: 38px
+        left: 42px
     }
 
     body.minimized #navbar .navbar-logo-container {
@@ -17346,8 +17360,8 @@ body #navbar .navbar li.tab>a>span.full-label {
     }
 
     body.minimized #navbar .navbar-header {
-        width: 38px;
-        height: 37px
+        width: 42px;
+        height: 55px
     }
 
     body.minimized #navbar a.minimizer>span.left {
@@ -17359,19 +17373,19 @@ body #navbar .navbar li.tab>a>span.full-label {
     }
 
     body.minimized #navbar .navbar {
-        width: 38px
+        width: 42px
     }
 
     body.minimized #navbar ul.tabs {
-        width: 38px
+        width: 42px
     }
 
     body.minimized #navbar ul.tabs>li>a {
-        padding-left: 10px
+        padding-left: 12px
     }
 
     body.minimized #navbar ul.tabs>li.tab>a {
-        padding-left: 10px
+        padding-left: 12px
     }
 
     body.minimized #navbar ul.tabs>li>a>span.short-label {
@@ -17393,17 +17407,17 @@ body #navbar .navbar li.tab>a>span.full-label {
     }
 
     body.minimized #navbar .navbar-right {
-        margin-left: 38px;
-        padding-right: 38px
+        margin-left: 42px;
+        padding-right: 42px
     }
 
     body.minimized #content {
-        padding-left: 53px;
-        max-width: 1538px
+        padding-left: 57px;
+        max-width: 1542px
     }
 
     body.minimized #footer {
-        margin-left: 38px
+        margin-left: 42px
     }
 
     body.minimized>.side-menu-backdrop {
@@ -17413,12 +17427,12 @@ body #navbar .navbar li.tab>a>span.full-label {
         left: 0;
         z-index: 2140;
         height: 100%;
-        margin-left: 200px
+        margin-left: 210px
     }
 
     body>.content {
-        padding-left: 215px;
-        max-width: 1700px
+        padding-left: 225px;
+        max-width: 1710px
     }
 
     body {
@@ -17444,7 +17458,7 @@ body #navbar .navbar li.tab>a>span.full-label {
     }
 
     body>footer {
-        margin-left: 200px
+        margin-left: 210px
     }
 
     input.global-search-input {
@@ -17453,7 +17467,7 @@ body #navbar .navbar li.tab>a>span.full-label {
     }
 
     #login {
-        margin-left: -200px
+        margin-left: -210px
     }
 }
 
@@ -17464,23 +17478,23 @@ body #navbar .navbar li.tab>a>span.full-label {
 }
 
 body .stick-sub.button-container {
-    width: calc(100% - 200px)
+    width: calc(100% - 210px)
 }
 
 body.minimized .stick-sub.button-container {
-    width: calc(100% - 38px)
+    width: calc(100% - 42px)
 }
 
 body .list-buttons-container .sticked-bar {
-    width: calc(100% - 200px);
-    left: 200px;
+    width: calc(100% - 210px);
+    left: 210px;
     top: 30px;
     padding-left: 15px
 }
 
 body.minimized .list-buttons-container .sticked-bar {
-    width: calc(100% - 38px);
-    left: 38px
+    width: calc(100% - 42px);
+    left: 42px
 }
 
 @media screen and (max-width:767px) {
@@ -17501,7 +17515,7 @@ body.minimized .list-buttons-container .sticked-bar {
     }
 }
 
-@media screen and (min-width:1700px) {
+@media screen and (min-width:1710px) {
     #content #main>.list-container>.list {
         margin-left: 0;
         margin-right: 0
@@ -17523,7 +17537,7 @@ body.minimized .list-buttons-container .sticked-bar {
     }
 }
 
-@media screen and (min-width:1538px) {
+@media screen and (min-width:1542px) {
     body.minimized #content #main>.list-container>.list {
         margin-left: 0;
         margin-right: 0
@@ -18111,18 +18125,12 @@ body .panel-primary>.panel-heading .btn-group.open .dropdown-toggle.btn:focus {
     color: #fff
 }
 
-.panel#login {
-    border: 1px #a5a5a5 solid;
-    border-radius: 3px;
-    margin-top: 50px;
-}
-
 .panel {
-    border-width: 0;
+    border-width: 0
 }
 
 .panel-heading>.btn-group>.btn {
-    border-radius: 0 !important
+    border-radius: 0 !important;
 }
 
 h4.panel-title span.fas.color-icon {
@@ -18143,6 +18151,87 @@ h4.panel-title span.fas.color-icon {
 }
 
 .panel.sticked>.panel-heading .btn-group .btn {
+    border-top-width: 0
+}
+
+.record .record-grid {
+    display: grid;
+    grid-column-gap: 15px;
+    grid-template-columns: minmax(auto, 67%) minmax(auto, 33%)
+}
+
+.record .record-grid.record-grid-wide {
+    grid-template-columns: 100%
+}
+
+.record .record-grid.record-grid-wide.record-grid-wide {
+    grid-template-columns: 100%
+}
+
+.record .record-grid.record-grid-small {
+    grid-template-columns: minmax(auto, 60%) minmax(auto, 40%)
+}
+
+.modal-body .record .record-grid {
+    grid-column-gap: 14px
+}
+
+.modal-body .record-grid-wide {
+    margin-left: -14px;
+    margin-right: -14px
+}
+
+@media screen and (max-width:991px) {
+    .record .record-grid {
+        grid-template-columns: 100%
+    }
+
+    .record .record-grid.record-grid-small {
+        grid-template-columns: 100%
+    }
+}
+
+.record .middle>.panel:first-child {
+    border-top-width: 0
+}
+
+.record .middle {
+    margin-bottom: 19px
+}
+
+.record .middle>.panel.hidden+.panel {
+    border-top-width: 0
+}
+
+.record .middle .panel+.panel.panels-show-more-delimiter {
+    padding: 10px 14px;
+    border-top-width: 0
+}
+
+.record .middle>.panel {
+    border-top-width: 0;
+    margin-bottom: 0
+}
+
+.record .middle>.panel>.panel-heading .btn-group {
+    top: -6px
+}
+
+.record .middle>.panel>.panel-heading .btn-group .btn {
+    border-top-width: 0
+}
+
+.record .side>.panel.sticked:first-child {
+    margin-top: 0;
+    border-top-width: 0
+}
+
+.record .side .panel.hidden+.panel.sticked {
+    margin-top: 0;
+    border-top-width: 0
+}
+
+.record .bottom .panel.hidden+.panel.sticked {
     border-top-width: 0
 }
 
@@ -18225,11 +18314,10 @@ label {
 }
 
 .page-header {
-    margin: 10px 0;
+    margin: 15px 0;
     border-bottom: 0;
     padding-bottom: 2px;
-    min-height: 33px;
-    margin-top: 60px;
+    min-height: 33px
 }
 
 .page-header .header-title,
@@ -18280,12 +18368,14 @@ label {
         display: grid;
         grid-template-columns: auto max-content;
         margin-left: 0;
-        margin-right: 0
+        margin-right: 0;
+        margin-top: 50px;
     }
 
     @media screen and (max-width:767px) {
         .page-header .page-header-row {
-            grid-template-columns: auto
+            grid-template-columns: auto;
+            margin-top: 0px;
         }
     }
 
@@ -19051,8 +19141,8 @@ ul.dropdown-menu>li>a>.check-icon+div {
 }
 
 #login.panel>.panel-heading {
-    background-color: #363635;
-    padding: 10px;
+    background-color: #546e7a;
+    padding: 0;
     margin: -2px
 }
 
@@ -19245,6 +19335,12 @@ section>p:last-child {
 #main>.list-container>.list {
     margin-left: -15px;
     margin-right: -15px
+}
+
+#main>.list-container>.list-tree>ul,
+.modal-body>.list-container>.list-tree>ul {
+    padding-top: 8px;
+    padding-bottom: 8px
 }
 
 @media screen and (min-width:768px) {
@@ -19728,6 +19824,24 @@ label.attach-file-label>input.file {
     margin-bottom: 0
 }
 
+.list-row>.cell>.attachment-preview {
+    margin-bottom: -8px;
+    margin-top: -8px
+}
+
+.list-row>.cell>.attachment-preview:not(.no-shrink) {
+    max-height: 35px
+}
+
+.list-row>.cell>.attachment-preview:not(.no-shrink) a {
+    display: inline-block
+}
+
+.list-row>.cell>.attachment-preview:not(.no-shrink) img {
+    max-height: 35px;
+    vertical-align: top
+}
+
 .stick-sub {
     position: fixed;
     top: 0;
@@ -19883,50 +19997,6 @@ td>span.fas.color-icon {
     #main>.list-container>.list>table th:last-child {
         padding-right: 10px
     }
-}
-
-.record .middle>.panel:first-child {
-    border-top-width: 0
-}
-
-.record .middle {
-    margin-bottom: 19px
-}
-
-.record .middle>.panel.hidden+.panel {
-    border-top-width: 0
-}
-
-.record .middle .panel+.panel.panels-show-more-delimiter {
-    padding: 10px 14px;
-    border-top-width: 0
-}
-
-.record .middle>.panel {
-    border-top-width: 0;
-    margin-bottom: 0
-}
-
-.record .middle>.panel>.panel-heading .btn-group {
-    top: -6px
-}
-
-.record .middle>.panel>.panel-heading .btn-group .btn {
-    border-top-width: 0
-}
-
-.side>.panel.sticked:first-child {
-    margin-top: 0;
-    border-top-width: 0
-}
-
-.side .panel.hidden+.panel.sticked {
-    margin-top: 0;
-    border-top-width: 0
-}
-
-.bottom .panel.hidden+.panel.sticked {
-    border-top-width: 0
 }
 
 .expanded-row span.label {
@@ -20406,6 +20476,11 @@ table.table td.cell .complex-text {
     padding: 3px 0
 }
 
+.list-group-tree>li .cell .remove-link {
+    margin-left: 4px;
+    margin-right: 4px
+}
+
 .categories-container .root-item {
     padding-bottom: 3px
 }
@@ -20672,6 +20747,10 @@ table.table-admin-panel td {
     overflow: hidden
 }
 
+.admin-search-container {
+    margin-bottom: 20px
+}
+
 .admin-panel-iframe-container {
     height: 100%
 }
@@ -20755,10 +20834,6 @@ table.table-admin-panel td {
 }
 
 @media screen and (min-width:992px) {
-    .admin-content .admin-right-column {
-        padding-top: 28px
-    }
-
     .col-md-12.hidden-cell {
         min-height: 0
     }
@@ -20875,6 +20950,10 @@ table.table-admin-panel td {
         .folders-container>.list-group>li {
             padding-right: 10px
         }
+    }
+
+    .page-header {
+        margin: 10px 0
     }
 }
 
@@ -21046,6 +21125,7 @@ body>footer>p.credit {
 body>footer>p.credit:after {
     content: " designed by devcrm.it";
 }
+
 
 body>footer>p,
 body>footer>p a,
@@ -21731,7 +21811,11 @@ table.table {
 }
 
 #login.panel>.panel-heading {
-    margin: 0 !important
+    margin: 0 !important;
+    background-color: #363635;
+    padding: 10px;
+    margin: -2px
+
 }
 
 #global-search-panel>.panel,
@@ -21865,6 +21949,7 @@ tr.list-row:hover {
     background-color: #e8eced;
 }
 
+
 body {
-    --theme-name: Demo Dubas
+    --theme-name: DubasLightTheme
 }

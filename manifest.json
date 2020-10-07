@@ -3,9 +3,9 @@
     "description": "More modern theme adjusted by dubas.pro",
     "author": "DUBAS - contact@dubas.pro",
     "acceptableVersions": [
-        ">=5.9.0"
+        ">=6.0.0"
     ],
-    "version": "0.0.1",
+    "version": "0.0.3",
     "skipBackup": true,
-    "releaseDate": "2020-09-04"
+    "releaseDate": "2020-10-06"
 }
