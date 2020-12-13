@@ -5,7 +5,8 @@
     "acceptableVersions": [
         ">=6.0.0"
     ],
-    "version": "0.0.3",
+    "version": "0.0.4",
     "skipBackup": true,
-    "releaseDate": "2020-10-06"
+    "checkVersionUrl": "https://devcrm.it",
+    "releaseDate": "2020-12-13"
 }
