@@ -30,7 +30,7 @@
             </div>
         </div>
         <div class="text-center">
-            <a href="https://www.espocrm.com/" target="_blank" class="btn btn-secondary btn-sm">© 2020 EspoCRM</a> | 
+            <a href="https://www.espocrm.com/" target="_blank" class="btn btn-secondary btn-sm">© 2021 EspoCRM</a> | 
             <a href="https://devcrm.it" target="_blank" class="btn btn-secondary btn-sm">
                 <i class="fa fa-code"></i> with <i class="fa fa-heart"></i> by devcrm.it </a>
         </div>
