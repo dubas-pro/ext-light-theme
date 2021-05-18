@@ -1,0 +1,13 @@
+<?php
+return [
+    'isDeveloperMode' => true,
+    'useCacheInDeveloperMode' => false,
+    'useCache' => false,
+    'systemItems' => [
+        'webSocketDebugMode' => true,
+    ],
+    'defaultPermissions' => [
+        'user' => null,
+        'group' => null
+    ],
+];

@@ -1,6 +1,6 @@
 {
-    "stylesheet": "client/modules/DubasLightTheme/css/espo/light-dubas.css",
-    "stylesheetIframe": "client/modules/DubasLightTheme/css/espo/light-dubas-iframe.css",
+    "stylesheet": "client/modules/dubas-light-theme/css/espo/light-dubas.css",
+    "stylesheetIframe": "client/modules/dubas-light-theme/css/espo/light-dubas-iframe.css",
     "navbarIsVertical": true,
     "recordTopButtonsStickTop": 61,
     "recordTopButtonsBlockHeight": 21,

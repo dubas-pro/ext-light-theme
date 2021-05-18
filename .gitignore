@@ -1,0 +1,20 @@
+# Editors
+project.xml
+project.properties
+/nbproject/private/
+.buildpath
+.project
+.settings*
+.idea
+*.sublime-project
+*.sublime-workspace
+.sublimelinterrc
+*.swp
+
+build/
+site/
+vendor/
+tests/integration/config.php
+node_modules
+config.json
+config.php

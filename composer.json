@@ -1,0 +1,43 @@
+{
+    "name": "dubas/ext-dubas-light-theme",
+    "description": "",
+    "require": {
+        "php": "^7.4"
+    },
+    "require-dev": {
+        "symplify/easy-coding-standard": "^9.2",
+        "rector/rector": "^0.10.3"
+    },
+    "scripts": {
+        "espo:rebuild": [
+            "@espo:copy",
+            "node build --rebuild"
+        ],
+        "espo:copy": "node build --copy",
+        "espo:clear-cache": "rm -rf site/data/cache/*",
+        "espo:tests-prepare": [
+            "@espo:copy",
+            "cd site && grunt test"
+        ],
+        "espo:tests-unit": [
+            "@espo:copy",
+            "cd site && vendor/bin/phpunit tests/unit/Espo/Modules/DubasLightTheme"
+        ],
+        "espo:tests-integration": [
+            "@espo:copy",
+            "cd site && vendor/bin/phpunit tests/integration/Espo/Modules/DubasLightTheme"
+        ],
+        "espo:merge-configs": "cd php_scripts && php merge_configs.php",
+        "ecs": [
+            "vendor/bin/ecs check --fix"
+        ],
+        "rector": [
+            "vendor/bin/rector process"
+        ]
+    },
+    "extra": {
+        "scripts-description": {
+            "ecs": "Fix coding standards warnings/errors automatically with PHP Easy Coding Standard"
+        }
+    }
+}
