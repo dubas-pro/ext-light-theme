@@ -9537,7 +9537,8 @@ button.close {
 .datepicker-dropdown {
     top: 0;
     left: 0;
-    padding: 4px
+    padding: 4px;
+    z-index: 1030 !important;
 }
 
 .datepicker-dropdown:before {
