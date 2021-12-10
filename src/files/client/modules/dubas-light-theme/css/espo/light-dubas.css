@@ -19887,7 +19887,7 @@ label.attach-file-label>input.file {
 }
 
 .stick-sub.button-container {
-    background-color: #f3f3f3;
+    /* background-color: #f3f3f3; */
     padding: 3px 15px 0 15px;
     width: 100%
 }
@@ -21649,7 +21649,7 @@ fieldset[disabled] .btn-text .fas {
 }
 
 .stick-sub {
-    margin-top: 30px
+    margin-top: 70px
 }
 
 .side-menu-backdrop {
@@ -21861,7 +21861,7 @@ table.table {
 }
 
 .record .stick-sub.button-container {
-    background-color: #f3f3f3 !important;
+    /* background-color: #f3f3f3 !important; */
     padding-bottom: 0
 }
 
