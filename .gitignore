@@ -6,6 +6,7 @@ project.properties
 .project
 .settings*
 .idea
+.vscode
 *.sublime-project
 *.sublime-workspace
 .sublimelinterrc
@@ -13,8 +14,32 @@ project.properties
 
 build/
 site/
-vendor/
+!src/**/site/
 tests/integration/config.php
-node_modules
+.env
 config.json
 config.php
+/extensions/
+
+# Package Managers
+.eslintcache
+.pnpm-store/
+node_modules/
+vendor/
+
+# Extension Directory
+src/**/client/**/lib/*
+src/**/client/**/css/espo/*
+# src/**/client/**/fonts/*
+
+# +----------------------------+
+# |    Keep .gitkeep files     |
+# +----------------------------+-------------------------------+
+# | To keep an empty directory, add a .gitkeep file to it      |
+# | and ignore the directory with a wildcard:                  |
+# |                                                            |
+# |     /path/to/dir/*                                         |
+# |                                                            |
+# | this will ignore the content but not the director itself.  |
+# +------------------------------------------------------------+
+!/**/.gitkeep

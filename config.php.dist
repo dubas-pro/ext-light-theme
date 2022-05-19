@@ -1,13 +1,27 @@
 <?php
 return [
+    'theme' => 'DubasLight',
     'isDeveloperMode' => true,
-    'useCacheInDeveloperMode' => false,
-    'useCache' => false,
-    'systemItems' => [
-        'webSocketDebugMode' => true,
-    ],
     'defaultPermissions' => [
         'user' => null,
         'group' => null
     ],
+    'timeZone' => 'Europe/Warsaw',
+    'dateFormat' => 'DD/MM/YYYY',
+    'timeFormat' => 'HH:mm',
+    'weekStart' => 1,
+    'logger' => [
+        'path' => 'data/logs/espo.log',
+        'level' => 'DEBUG',
+        'rotation' => false
+    ],
+    'outboundEmailIsShared' => true,
+    'outboundEmailFromName' => 'EspoCRM',
+    'outboundEmailFromAddress' => 'admin@espocrm.loc',
+    'smtpServer' => 'smtp4dev',
+    'smtpPort' => 25,
+    'smtpAuth' => false,
+    'smtpSecurity' => '',
+    'smtpUsername' => '',
+    'smtpPassword' => '',
 ];
