@@ -1,17 +1,17 @@
 {
     "module": "DubasLightTheme",
     "name": "Dubas Theme",
-    "description": "A custom theme for EspoCRM.",
+    "description": "More modern theme adjusted by dubas.pro. Paid support available through email contact@devcrm.it. [☢️Repo](https://github.com/dubas-pro/ext-light-theme)",
     "author": "DUBAS S.C. - contact@dubas.pro",
     "authors": [
         "Arkadiy Asuratov",
         "Emil Dubielecki"
     ],
     "acceptableVersions": [
-        ">=7.0.0"
+        ">=7.1.0"
     ],
     "php": [
-        ">=7.3"
+        ">=7.4"
     ],
     "releaseDate": "2022-05-18",
     "checkVersionUrl": "https://devcrm.it"
