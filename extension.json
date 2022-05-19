@@ -1,14 +1,18 @@
 {
     "module": "DubasLightTheme",
-    "name": "Dubas Light Theme",
-    "description": "More modern theme adjusted by dubas.pro. Paid support available through email contact@devcrm.it.",
-    "author": "DUBAS - contact@dubas.pro",
+    "name": "Dubas Theme",
+    "description": "More modern theme adjusted by dubas.pro. Paid support available through email contact@devcrm.it. [☢️Repo](https://github.com/dubas-pro/ext-light-theme)",
+    "author": "DUBAS S.C. - contact@dubas.pro",
+    "authors": [
+        "Arkadiy Asuratov",
+        "Emil Dubielecki"
+    ],
     "acceptableVersions": [
-        ">=6.1.0"
+        ">=7.1.0"
     ],
     "php": [
         ">=7.4"
     ],
-    "skipBackup": true,
+    "releaseDate": "2022-05-18",
     "checkVersionUrl": "https://devcrm.it"
 }

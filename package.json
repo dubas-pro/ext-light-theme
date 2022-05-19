@@ -1,12 +1,13 @@
 {
     "name": "espocrm-ext-dubas-light-theme",
-    "version": "0.0.6",
+    "version": "1.0.0",
+    "packageManager": "pnpm@7.0.1",
     "description": "",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "eslint:fix": "eslint --fix src/**/src/**/*.js"
     },
-    "author": "DUBAS - contact@dubas.pro",
+    "author": "DUBAS S.C. - contact@dubas.pro",
     "license": "GPL-3.0",
     "dependencies": {
         "archiver": "^4.0.1",
@@ -17,9 +18,10 @@
     },
     "devDependencies": {
         "eslint": "^7.25.0",
-        "eslint-config-prettier": "^8.3.0",
         "eslint-plugin-header": "^3.1.1",
-        "eslint-plugin-prettier": "^3.4.0",
-        "prettier": "^2.2.1"
+        "fstream": ">=1.0.12",
+        "grunt": "^1.4.1",
+        "grunt-contrib-cssmin": "^4.0.0",
+        "grunt-contrib-less": "^3.0.0"
     }
 }
