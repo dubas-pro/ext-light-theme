@@ -41,23 +41,36 @@ services:
   # PHP
   # ------------------------------------------------------------
   php:
-    image: devilbox/php-fpm:8.0-work
+    image: devilbox/php-fpm:${PHP_SERVER:-8.1}-work
     container_name: php
     hostname: php
 
     working_dir: /var/www/default
 
     environment:
+      ##
+      ## Debug/Logging
+      ##
+      - DEBUG_ENTRYPOINT=2
+      - DEBUG_COMPOSE_ENTRYPOINT=2
+      - DOCKER_LOGS=1
+
+      - SSH_AUTH_SOCK=${SSH_AUTH_SOCK}
       - COMPOSER_MEMORY_LIMIT=-1
 
     volumes:
-      - $PWD:/var/www/default:rw
+      - ${PWD}:/var/www/default:rw
 
       # Users SSH directory (read-only)
+      - ${SSH_AUTH_SOCK_DIR:-/dev/null}:${SSH_AUTH_SOCK_DIR:-/dev/null}
       - ${HOME}/.ssh:/home/devilbox/.ssh:ro
 
       # Users .bash_history file
       - ${HOME}/.bash_history:/home/devilbox/.bash_history:rw
+
+      # Mount devilbox user-defined PHP-FPM startup *.sh scripts
+      - ${PWD}/docker/cfg/php-startup-${PHP_SERVER:-8.1}:/startup.1.d:rw
+      - ${PWD}/docker/autostart:/startup.2.d:rw
 
   # ------------------------------------------------------------
   # Web Server
@@ -96,54 +109,13 @@ services:
 
     environment:
       - MYSQL_ROOT_PASSWORD
-      - MYSQL_PASSWORD
       - MYSQL_ALLOW_EMPTY_PASSWORD=${MYSQL_ALLOW_EMPTY_PASSWORD:-yes}
+      - MYSQL_USER=${MYSQL_PASSWORD:-espocrm}
+      - MYSQL_DATABASE=${MYSQL_DATABASE:-espocrm}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD:-espocrm}
 
     volumes:
       - mysql:/var/lib/mysql:rw
-
-  # ------------------------------------------------------------
-  # Fake SMTP server
-  # ------------------------------------------------------------
-  # maildev:
-  #   image: maildev/maildev:latest
-  #   container_name: maildev
-  #   hostname: maildev
-  #   restart: always
-
-  #   environment:
-  #     - TZ=Europe/Warsaw
-  #     - MAILDEV_WEB_PORT=1080
-  #     - MAILDEV_SMTP_PORT=25
-
-  #   labels:
-  #     - traefik.enable=true
-  #     - traefik.http.routers.maildev.rule=Host(`mail.localhost`)
-  #     - traefik.http.routers.maildev.entrypoints=http
-  #     - traefik.http.routers.maildev.service=maildev-service
-  #     - traefik.http.services.maildev-service.loadbalancer.server.port=1080
-
-  # ------------------------------------------------------------
-  # Fake SMTP server
-  # ------------------------------------------------------------
-  smtp4dev:
-    image: rnwood/smtp4dev:v3
-    container_name: smtp4dev
-    hostname: smtp4dev
-    restart: always
-
-    environment:
-      - ServerOptions__HostName=smtp4dev
-
-    labels:
-      - traefik.enable=true
-      - traefik.http.routers.smtp4dev.rule=Host(`mail.localhost`)
-      - traefik.http.routers.smtp4dev.entrypoints=http
-      - traefik.http.routers.smtp4dev.service=smtp4dev-service
-      - traefik.http.services.smtp4dev-service.loadbalancer.server.port=80
-
-    volumes:
-      - smtp4dev-data:/smtp4dev
 
   # ------------------------------------------------------------
   # phpMyAdmin
@@ -184,8 +156,27 @@ services:
       - traefik.http.routers.ngrok.entrypoints=http
       - traefik.http.services.ngrok.loadbalancer.server.port=4040
 
-    depends_on:
-      - espocrm
+  # ------------------------------------------------------------
+  # Fake SMTP server
+  # ------------------------------------------------------------
+  smtp4dev:
+    image: rnwood/smtp4dev:v3
+    container_name: smtp4dev
+    hostname: smtp4dev
+    restart: always
+
+    environment:
+      - ServerOptions__HostName=smtp4dev
+
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.smtp4dev.rule=Host(`mail.localhost`)
+      - traefik.http.routers.smtp4dev.entrypoints=http
+      - traefik.http.routers.smtp4dev.service=smtp4dev-service
+      - traefik.http.services.smtp4dev-service.loadbalancer.server.port=80
+
+    volumes:
+      - smtp4dev-data:/smtp4dev
 
 volumes:
   mysql: null

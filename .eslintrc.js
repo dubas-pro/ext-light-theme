@@ -42,17 +42,13 @@ module.exports = {
     parserOptions: {
         'ecmaVersion': 12,
         'sourceType': 'module'
-
     },
     plugins: [
         'header'
     ],
     ignorePatterns: [
         '/site/**',
-        'src/**/lib/**',
-        'build.js',
-        'copy-custom.js',
-        'helpers.js'
+        'src/**/lib/**'
     ],
     rules: {
         'no-var': 'error',

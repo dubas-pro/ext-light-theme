@@ -3,15 +3,8 @@
         "GPL-3.0-or-later"
     ],
     "require": {
-        "php": "^7.4|^8.0"
-    },
-    "require-dev": {
-        "dubas/espo-dev-lib": "dev-main"
-    },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "ssh://git@git.dubas.pro/dubas/espo-dev-lib.git"
-        }
-    ]
+        "php": "^7.4|^8.0",
+        "symplify/easy-coding-standard": "^10.2",
+        "dubas/espo-console": "*"
+    }
 }

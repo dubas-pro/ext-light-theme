@@ -30,7 +30,7 @@ vendor/
 # Extension Directory
 src/**/client/**/lib/*
 src/**/client/**/css/espo/*
-# src/**/client/**/fonts/*
+src/**/client/**/fonts/*
 
 # +----------------------------+
 # |    Keep .gitkeep files     |
