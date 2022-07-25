@@ -23,6 +23,7 @@ config.php
 
 # Package Managers
 .eslintcache
+.pnpm-debug.log
 .pnpm-store/
 node_modules/
 vendor/
