@@ -4,7 +4,8 @@
     "packageManager": "pnpm@7.0.1",
     "description": "",
     "scripts": {
-        "eslint:fix": "eslint --fix src/**/src/**/*.js"
+        "eslint:fix": "eslint --fix src/**/src/**/*.js",
+        "build": "cd src/files/client/custom/modules/dubas-light-theme; pnpm exec grunt"
     },
     "author": "DUBAS S.C. - contact@dubas.pro",
     "license": "GPL-3.0",
