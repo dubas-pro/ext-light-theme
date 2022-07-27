@@ -27,6 +27,14 @@ class BeforeInstall
     public function run($container)
     {
         $this->container = $container;
+
+        $entityManager = $container->get('entityManager');
+
+        $extension = $entityManager->getRepository('Extension')->where(array('name' => 'Dubas Theme'))->findOne();
+        if ($extension) {
+            throw new \Espo\Core\Exceptions\Error('You need to unistall the old version of Dubas Theme first.');
+        }
+
     }
 
     protected function clearCache()
