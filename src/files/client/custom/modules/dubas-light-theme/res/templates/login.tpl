@@ -21,7 +21,7 @@
                         <input type="password" name="password" id="field-password" class="form-control" tabindex="2" autocomplete="current-password">
                     </div>
                     <div class="form-group">
-                        {{#if showForgotPassword}}<a href="javascript:" data-action="passwordChangeRequest" class="forgot-btn pull-right">{{translate 'Forgot Password?' scope='User'}}</a>{{/if}}
+                        {{#if showForgotPassword}}<a href="javascript:" data-action="passwordChangeRequest" class="forgot-btn btn-sm pull-right">{{translate 'Forgot Password?' scope='User'}}</a>{{/if}}
                     </div>
                     <div class="form-group">
                         <button type="submit" id="btn-login" class="btn btn-block btn-primary">{{translate 'Login' scope='User'}}</button>
@@ -30,9 +30,12 @@
             </div>
         </div>
         <div class="text-center">
-            <a href="https://www.espocrm.com/" target="_blank" class="btn btn-secondary btn-sm">© 2022 EspoCRM</a> | 
+            <a href="https://www.espocrm.com/" target="_blank" class="btn btn-secondary btn-sm">© 2023 EspoCRM</a> | 
             <a href="https://devcrm.it" target="_blank" class="btn btn-secondary btn-sm">
                 <i class="fa fa-code"></i> with <i class="fa fa-heart"></i> by devcrm.it </a>
         </div>
     </div>
 </div>
+
+
+
