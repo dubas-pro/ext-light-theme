@@ -2,4 +2,4 @@
 
 set -eu
 
-./bin/bash -c "/home/devilbox/.composer/vendor/bin/espo $*"
+docker exec --interactive --tty --user devilbox espo-console /usr/local/bin/espo "$@"
