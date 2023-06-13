@@ -8,12 +8,12 @@
         "Emil Dubielecki"
     ],
     "acceptableVersions": [
-        ">=7.1.0"
+        ">=7.4.0"
     ],
     "php": [
         ">=7.4"
     ],
-    "releaseDate": "2022-05-18",
+    "releaseDate": "2023-06-13",
     "checkVersionUrl": "https://devcrm.it",
     "buildIgnorePathList": [
         "client/custom/modules/dubas-light-theme/node_modules",
