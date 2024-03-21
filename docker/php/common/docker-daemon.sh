@@ -1,7 +1,0 @@
-#!/bin/bash
-
-set -eu
-
-/usr/local/bin/php /shared/httpd/site/daemon.php
-
-exec "$@"

@@ -10,13 +10,7 @@
     "acceptableVersions": [
         ">=7.4.0"
     ],
-    "php": [
-        ">=7.4"
-    ],
+    "php": [],
     "releaseDate": "2023-06-13",
-    "checkVersionUrl": "https://devcrm.it",
-    "buildIgnorePathList": [
-        "client/custom/modules/dubas-light-theme/node_modules",
-        "client/custom/modules/dubas-light-theme/frontend"
-    ]
+    "checkVersionUrl": "https://devcrm.it"
 }

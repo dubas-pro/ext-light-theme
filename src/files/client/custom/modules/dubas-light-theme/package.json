@@ -1,5 +1,8 @@
 {
-    "packageManager": "pnpm@7.0.1",
+    "engines": {
+        "npm": ">=7",
+        "node": ">=15"
+    },
     "scripts": {
         "install": "git clone https://github.com/espocrm/espocrm.git --depth 1 -b stable node_modules/espocrm",
         "postinstall": "grunt"

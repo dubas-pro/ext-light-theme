@@ -6,24 +6,25 @@ project.properties
 .project
 .settings*
 .idea
-.vscode
 *.sublime-project
 *.sublime-workspace
 .sublimelinterrc
 *.swp
 
+/Makefile.*
 build/
+html/
 site/
 !src/**/site/
+!src/**/html/
 tests/integration/config.php
 .env
-config.json
-config.php
+/config.json
+/config.php
 /extensions/
 
 # Package Managers
 .eslintcache
-.pnpm-debug.log
 .pnpm-store/
 node_modules/
 vendor/

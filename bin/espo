@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-
-set -eu
-
-docker exec --interactive --tty --user devilbox espo-console /usr/local/bin/espo "$@"
