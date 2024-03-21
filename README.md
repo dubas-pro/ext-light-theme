@@ -1,11 +1,8 @@
 # Dubas Light Theme for EspoCRM
 
-[![License: GPL v3](https://img.shields.io/badge/license-GPL--3.0--or--later-blue)](https://www.gnu.org/licenses/gpl-3.0)
+The theme developed by devcrm.it for EspoCRM is available for download as an extension to EspoCRM at <https://devcrm.it/light-theme>.
 
-![Screenshot of Dubas Light Theme](https://devcrm.it/files/2020-09-05_19-44-27_5341b3-kT-694352_68d5145808106b.png)
-The theme created by devcrm.it to EspoCRM. The theme is available for download as an extension to EspoCRM at [https://devcrm.it/light-theme](https://devcrm.it/light-theme).
-
-This repo is for comments only, but we do not give any warranty for the theme or installer. You install this theme on your own responsibility. We do not provide additional free support.
+This repository is for comments only, and we do not provide any warranty for the theme or installer. You install this theme at your own risk, and we do not offer additional free support.
 
 ## Requirements
 
@@ -16,12 +13,48 @@ If you have version 5.9.X of EspoCRM, you can download extension with theme from
 
 ## Getting started
 
-1. Open our website [https://devcrm.it/light-theme](https://devcrm.it/light-theme) and download installer;
+1. Open our website <https://devcrm.it/light-theme> and download installer;
 2. Login to your EspoCRM as admin;
 3. Go to admin section and open extensions page;
 4. Choose installer from you computer and start installation process;
 5. Choose new theme in your user preferences.
 
+## Development
+
+To build a full instance, run:
+
+```bash
+make full
+```
+
+## Building extension package
+
+To build extension package run the following command:
+
+```bash
+make package
+```
+
+## Troubleshoting
+
+When encountering any problems, try to run the following commands:
+
+```bash
+make clean;
+make full;
+```
+
+If the problem persists, try to rebuild Docker images:
+
+```bash
+docker compose build --no-cache --pull;
+make full;
+```
+
 ## Support
 
-All information about our services you can check on our website [https://devcrm.it/](https://devcrm.it/).
+All information about our services can be checked on our website <https://devcrm.it>.
+
+## License
+
+Please see [License File](LICENSE) for more information.
