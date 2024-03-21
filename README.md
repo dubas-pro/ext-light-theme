@@ -44,13 +44,6 @@ make clean;
 make full;
 ```
 
-If the problem persists, try to rebuild Docker images:
-
-```bash
-docker compose build --no-cache --pull;
-make full;
-```
-
 ## Support
 
 All information about our services can be checked on our website <https://devcrm.it>.
