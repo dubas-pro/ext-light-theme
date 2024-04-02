@@ -20,5 +20,10 @@
         "espo-extension-tools": "github:espocrm/extension-tools#0.1.2",
         "fs-extra": "^9.0.0",
         "prettier": "^2.6.2"
+    },
+    "devDependencies": {
+        "grunt-contrib-copy": "^1.0.0",
+        "grunt-contrib-cssmin": "^5.0.0",
+        "grunt-contrib-less": "^3.0.0"
     }
 }
