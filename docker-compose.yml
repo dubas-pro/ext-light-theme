@@ -1,11 +1,9 @@
 ---
-version: '3'
-
 ################################################################################
 # VOLUMES
 ################################################################################
 volumes:
-  mysql: {}
+  db: {}
 
 ################################################################################
 # SERVICES
@@ -15,44 +13,49 @@ services:
   # PHP
   # ------------------------------------------------------------
   php:
-    image: devilbox/php-fpm:8.1-work
-    container_name: php
+    image: devilbox/php-fpm:${PHP_VERSION:-8.2}-work
     working_dir: /var/www/default
-    volumes: [.:/var/www/default:rw]
+
+    volumes:
+      - .:/var/www/default:rw
+
+    extra_hosts:
+      - host.docker.internal:host-gateway
+
     environment:
-      NEW_UID: 1000
-      NEW_GID: 1000
-      DEBUG_ENTRYPOINT: '2'
-      DEBUG_COMPOSE_ENTRYPOINT: '2'
-      DOCKER_LOGS: '1'
-      COMPOSER_MEMORY_LIMIT: '-1'
-      COMPOSER_POOL_OPTIMIZER: '0'
+      TEST_DATABASE_HOST: db
+      TEST_DATABASE_PORT: 3306
+      TEST_DATABASE_NAME: integration_test
+      TEST_DATABASE_USER: root
+      TEST_DATABASE_PASSWORD: ''
 
   # ------------------------------------------------------------
-  # Web Server
+  # Web Server (Apache)
   # ------------------------------------------------------------
   httpd:
-    image: devilbox/apache-2.4:alpine
-    container_name: httpd
-    ports: [8080:80]
-    volumes: [.:/var/www/default:ro]
-    depends_on: [php]
+    image: devilbox/apache-${APACHE_VERSION:-2.4}:alpine
+    ports:
+      - ${HTTPD_PORT:-0}:80
+
+    volumes:
+      - .:/var/www/default:ro
+
     environment:
       MAIN_VHOST_DOCROOT_DIR: site
       MAIN_VHOST_BACKEND: conf:phpfpm:tcp:php:9000
 
   # ------------------------------------------------------------
-  # MySQL Database
+  # Database
   # ------------------------------------------------------------
-  mysql:
-    image: mariadb:${MYSQL_VERSION:-lts}
-    container_name: mysql
-    restart: unless-stopped
-    ports: [3306:3306]
-    volumes: [mysql:/var/lib/mysql:rw]
+  db:
+    image: mariadb:${MARIADB_VERSION:-lts}
+    ports:
+      - ${DB_PORT:-0}:3306
+
+    volumes:
+      - db:/var/lib/mysql:rw
+
     environment:
-      MYSQL_ROOT_PASSWORD: ''
-      MYSQL_ALLOW_EMPTY_PASSWORD: ${MYSQL_ALLOW_EMPTY_PASSWORD:-yes}
-      MYSQL_USER: ${MYSQL_PASSWORD:-espocrm}
-      MYSQL_DATABASE: ${MYSQL_DATABASE:-espocrm}
-      MYSQL_PASSWORD: ${MYSQL_PASSWORD:-espocrm}
+      MARIADB_ROOT_PASSWORD: ''
+      MARIADB_ALLOW_EMPTY_ROOT_PASSWORD: ${MARIADB_ALLOW_EMPTY_ROOT_PASSWORD:-yes}
+      MARIADB_DATABASE: ${MARIADB_DATABASE:-espocrm}

@@ -1,63 +1,66 @@
 .DEFAULT_GOAL := help
 
-IS_DOCKER := $(shell [ -f /.dockerenv ] && echo true)
+.PHONY: npm-ci
+npm-ci: ## Install npm packages
+	@if [ ! -d "node_modules" ]; then npm ci --silent --no-update-notifier; fi
 
-.PHONY: requirements
-requirements: ## Install requirements
-	npm ci --no-audit --no-fund
+.PHONY: dev-composer-install
+dev-composer-install: ## Install composer packages for development
+	@if [ ! -d "vendor" ]; then composer install --quiet; fi
 
-.PHONY: full
-full: requirements ## Build full environment (will destroy existing data)
-ifdef IS_DOCKER
-	@echo "Error: This Makefile should not be run inside a Docker container."
-	@exit 1
-endif
-	docker compose build --no-cache --pull
-	docker compose up --detach --remove-orphans --force-recreate --build && sleep 3
-	docker exec --interactive --tty --user devilbox php sh -c ' \
-		node build --all; \
-		(cd src/files/client/custom/modules/dubas-light-theme; npm ci); \
-	'
+.PHONY: composer-install
+composer-install: npm-ci ## Install composer packages for the module
+	@node build --composer-install
 
-.PHONY: package
-package: requirements ## Build extension package
-	( \
-		cd src/files/client/custom/modules/dubas-light-theme; \
-		npm ci; \
-		mkdir --parents /tmp/dubas-light-theme; \
-		mv Gruntfile.js package-lock.json package.json frontend node_modules /tmp/dubas-light-theme; \
-	)
-	node build --extension
-	mv /tmp/dubas-light-theme/* src/files/client/custom/modules/dubas-light-theme
+.PHONY: up
+up: ## Start environment
+	@docker compose up --detach --remove-orphans
+
+.PHONY: all full
+all full: npm-ci up ## Build full environment
+	@echo "Building full environment..."
+	@docker compose exec --user devilbox php node build --all
+	@echo "Done."
+	@echo "Open http://localhost:$(shell docker compose port httpd 80 | awk -F: '{print $$2}') in your browser."
+
+.PHONY: extension package
+extension package: npm-ci ## Build extension package
+	@node build --extension
 
 .PHONY: copy
-copy: ## Copy extension
-	( \
-		cd src/files/client/custom/modules/dubas-light-theme; \
-		grunt; \
-		mkdir --parents /tmp/dubas-light-theme; \
-		mv Gruntfile.js package-lock.json package.json frontend node_modules /tmp/dubas-light-theme; \
-	)
-	node build --copy
-	mv /tmp/dubas-light-theme/* src/files/client/custom/modules/dubas-light-theme
+copy: npm-ci ## Copy extension
+	@echo "Copying extension..."
+	@node build --copy
 
-.PHONY: cc
-cc: copy ## Copy extension and clear cache
-	docker exec --interactive --tty --user devilbox php sh -c ' \
-		cd site; php clear_cache.php \
-	'
-
-.PHONY: cr
-cr: copy ## Copy extension and rebuild
-	docker exec --interactive --tty --user devilbox php sh -c ' \
+.PHONY: rebuild rb
+rebuild rb: ## Rebuild EspoCRM
+	@echo "Rebuilding..."
+	@docker compose exec --user devilbox php sh -c ' \
 		cd site; php rebuild.php; \
 	'
+	@echo "Done."
+
+.PHONY: clear-cache
+clear-cache: ## Clear EspoCRM cache
+	@echo "Clearing cache..."
+	@docker compose exec --user devilbox php sh -c ' \
+		cd site; php clear_cache.php \
+	'
+	@echo "Done."
+
+.PHONY: cc
+cc: copy clear-cache ## Copy extension and clear cache
+
+.PHONY: cr
+cr: copy rebuild ## Copy extension and rebuild
 
 .PHONY: clean
 clean: ## Clean up
-	docker compose down --volumes --remove-orphans
-	rm --recursive --force ./site
-	git clean -fdX
+	@echo "Stop, remove containers and volumes, and clean up..."
+	@docker compose down --volumes --remove-orphans
+	@rm --recursive --force site
+	@if [ -d .git ]; then git clean -fdX; fi
+	@echo "Done."
 
 .PHONY: help
 help: ## Display this help screen
