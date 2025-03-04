@@ -7,6 +7,7 @@
         "node": ">=18.18"
     },
     "scripts": {
+        "postversion": "git push --follow-tags",
         "js:fix": "eslint --fix src/**/src/**/*.js",
         "json:fix": "prettier --write src/**/*.json"
     },
