@@ -12,5 +12,8 @@
     ],
     "php": [],
     "releaseDate": "2023-06-13",
-    "checkVersionUrl": "https://devcrm.it"
+    "checkVersionUrl": "https://devcrm.it",
+    "scripts": [
+        "npx grunt"
+    ]
 }

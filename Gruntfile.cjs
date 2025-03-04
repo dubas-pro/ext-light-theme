@@ -1,8 +1,8 @@
 /************************************************************************
-This file is part of the Dubas Theme - EspoCRM extension.
+This file is part of the Dubas Light Theme - EspoCRM extension.
 
 DUBAS S.C. - contact@dubas.pro
-Copyright (C) 2022-2022 Arkadiy Asuratov, Emil Dubielecki
+Copyright (C) 2023-2025 Arkadiy Asuratov, Emil Dubielecki
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -19,12 +19,14 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ************************************************************************/
 
 const fs = require('fs');
+const modulePath = './src/files/custom/Espo/Modules/DubasLightTheme';
+const clientModulePath = './src/files/client/custom/modules/dubas-light-theme';
 
 module.exports = grunt => {
 
     let themeList = [];
 
-    fs.readdirSync('../../../../custom/Espo/Modules/DubasLightTheme/Resources/metadata/themes').forEach(file => {
+    fs.readdirSync(modulePath + '/Resources/metadata/themes').forEach(file => {
         themeList.push(file.substring(0, file.length - 5));
     });
 
@@ -37,11 +39,11 @@ module.exports = grunt => {
 
         let files = {};
 
-        files['css/espo/'+name+'.css'] = 'frontend/less/'+name+'/main.less';
-        files['css/espo/'+name+'-iframe.css'] = 'frontend/less/'+name+'/iframe/main.less';
+        files[clientModulePath + '/css/espo/' + name + '.css'] = 'frontend/less/' + name + '/main.less';
+        files[clientModulePath + '/css/espo/' + name + '-iframe.css'] = 'frontend/less/' + name + '/iframe/main.less';
 
-        cssminFilesData['css/espo/'+name+'.css'] = 'css/espo/'+name+'.css';
-        cssminFilesData['css/espo/'+name+'-iframe.css'] = 'css/espo/'+name+'-iframe.css';
+        cssminFilesData[clientModulePath + '/css/espo/' + name + '.css'] = clientModulePath + '/css/espo/' + name + '.css';
+        cssminFilesData[clientModulePath + '/css/espo/' + name + '-iframe.css'] = clientModulePath + '/css/espo/' + name + '-iframe.css';
 
         let o = {
             options: {
@@ -53,14 +55,14 @@ module.exports = grunt => {
         lessData[theme] = o;
     });
 
-    let fontsToCopy = [
-        'node_modules/espocrm/client/fonts/summernote.eot',
-        'node_modules/espocrm/client/fonts/summernote.ttf',
-        'node_modules/espocrm/client/fonts/summernote.woff',
-        'node_modules/espocrm/client/fonts/summernote.woff2',
-    ];
-
     grunt.initConfig({
+        clean: {
+            start: [
+                clientModulePath + '/fonts/*',
+                clientModulePath + '/css/*',
+            ],
+        },
+
         less: lessData,
 
         cssmin: {
@@ -76,8 +78,12 @@ module.exports = grunt => {
             fonts: {
                 expand: true,
                 flatten: true,
-                src: fontsToCopy,
-                dest: 'fonts/',
+                dest: clientModulePath + '/fonts/',
+                src: [
+                    'site/client/fonts/summernote.ttf',
+                    'site/client/fonts/summernote.woff',
+                    'site/client/fonts/summernote.woff2',
+                ],
             },
         }
     });
@@ -97,7 +103,7 @@ module.exports = grunt => {
     ]);
 };
 
-function camelCaseToHyphen(string){
+function camelCaseToHyphen(string) {
     if (string === null) {
         return string;
     }
