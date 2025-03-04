@@ -1,9 +1,10 @@
 <?php
+
 /**
- * This file is part of the Dubas Theme - EspoCRM extension.
+ * This file is part of the Dubas Light Theme - EspoCRM extension.
  *
  * DUBAS S.C. - contact@dubas.pro
- * Copyright (C) 2023 Arkadiy Asuratov, Emil Dubielecki
+ * Copyright (C) 2023-2025 Arkadiy Asuratov, Emil Dubielecki
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -19,20 +20,25 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
+use Espo\Core\Container;
+use Espo\Core\DataManager;
+
 class AfterInstall
 {
-    protected $container;
+    private Container $container;
 
-    public function run($container)
+    public function run(Container $container): void
     {
         $this->container = $container;
     }
 
-    protected function clearCache()
+    protected function clearCache(): void
     {
         try {
-            $this->container->get('dataManager')->clearCache();
-        } catch (\Exception $e) {
+            $this->container
+                ->getByClass(DataManager::class)
+                ->clearCache();
+        } catch (Exception) {
         }
     }
 }
