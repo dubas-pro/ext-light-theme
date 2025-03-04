@@ -19,6 +19,7 @@ up: ## Start environment
 .PHONY: all full
 all full: npm-ci up ## Build full environment
 	@echo "Building full environment..."
+	@if [ ! -f config.php ]; then cp config.dist.php config.php; fi
 	@docker compose exec --user devilbox php node build --all
 	@echo "Done."
 	@echo "Open http://localhost:$(shell docker compose port httpd 80 | awk -F: '{print $$2}') in your browser."
@@ -53,6 +54,15 @@ cc: copy clear-cache ## Copy extension and clear cache
 
 .PHONY: cr
 cr: copy rebuild ## Copy extension and rebuild
+
+.PHONY: config
+config: ## Merge config files
+	@echo "Merging config files..."
+	@if [ ! -f config.php ]; then cp config.dist.php config.php; fi
+	@docker compose exec --user devilbox php sh -c ' \
+		cd php_scripts; php merge_configs.php; \
+	'
+	@echo "Done."
 
 .PHONY: clean
 clean: ## Clean up
