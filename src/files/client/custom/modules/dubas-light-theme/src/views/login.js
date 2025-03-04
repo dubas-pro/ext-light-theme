@@ -1,4 +1,24 @@
-define('dubas-light-theme:views/login', 'views/login', function (Dep) {
+/************************************************************************
+This file is part of the Dubas Light Theme - EspoCRM extension.
+
+DUBAS S.C. - contact@dubas.pro
+Copyright (C) 2023-2025 Arkadiy Asuratov, Emil Dubielecki
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>.
+************************************************************************/
+
+define('dubas-light-theme:views/login', ['views/login'], (Dep) => {
 
     return Dep.extend({
 
@@ -8,7 +28,7 @@ define('dubas-light-theme:views/login', 'views/login', function (Dep) {
         // include the custom values in the standard "data" function which will provide the placeholder values to the template
         // the values for "logoSrc" and "showForgotPassword" are the standard values specified in the core login script
         data: function () {
-            return{        
+            return{
                 logoSrc: this.getLogoSrc(),
                 showForgotPassword: this.getConfig().get('passwordRecoveryEnabled'),
                 applicationName: this.getConfig().get('applicationName'),
@@ -18,7 +38,7 @@ define('dubas-light-theme:views/login', 'views/login', function (Dep) {
                 method: this.method,
                 signInText: this.signInText,
                 logInText: this.logInText,
-           };          
+            };
         },
 
         setup: function () {
@@ -54,4 +74,5 @@ define('dubas-light-theme:views/login', 'views/login', function (Dep) {
 
 
     });
+
 });
