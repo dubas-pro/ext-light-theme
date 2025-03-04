@@ -9,7 +9,7 @@ This repository is for comments only, and we do not provide any warranty for the
 EspoCRM in version higher than 7.1.0.
 For older versions of EspoCRM please check [download page](https://devcrm.it/light-theme).
 
-If you have version 5.9.X of EspoCRM, you can download extension with theme from our website https://devcrm.it/light-theme
+If you have version 5.9.X of EspoCRM, you can download extension with theme from our website <https://devcrm.it/light-theme>
 
 ## Getting started
 
