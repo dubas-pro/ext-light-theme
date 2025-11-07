@@ -81,7 +81,7 @@
         </div>
     </div>
         <div class="text-center">
-            <a href="https://www.espocrm.com/" target="_blank" class="btn btn-secondary btn-sm">© 2024 EspoCRM</a> |
+            <a href="https://www.espocrm.com/" target="_blank" class="btn btn-secondary btn-sm">© 2025 EspoCRM</a> |
             <a href="https://devcrm.it" target="_blank" class="btn btn-secondary btn-sm">Theme by devcrm.it</a>
         </div>
     </div>
